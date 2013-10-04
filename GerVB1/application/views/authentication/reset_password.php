@@ -2,6 +2,7 @@
 <div class="container">
 	<div class="row">
 		<div class="span4 offset4 well">
+		<fieldset>
 			<legend>Reset Password</legend>
 			{message}
 			<?php echo form_open('authentication/reset_password/' . $code);?>
@@ -15,6 +16,7 @@
 			<?php echo form_hidden($csrf); ?>
 			<button type="submit" name="submit" class="btn btn-primary btn-block"><?php echo lang('reset_password_submit_btn'); ?></button>
 			<?php echo form_close();?>
+		</fieldset>
 		</div>
 	</div>
 </div>
