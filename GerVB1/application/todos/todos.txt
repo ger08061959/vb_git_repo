@@ -1,0 +1,160 @@
+WHAT'S NEW?
+-----------
+De organisation (publisher, reseller, etc.) bepaalt welke metadata fields er komen.
+	Dus je moet per publisher in kunnen stellen:
+		welke user [metadata]  e.g. business_line 
+		welke video [metadata] e.g. business_line (maar ook external etc.)
+		welke publishers mogen wel security options wijzigen?
+
+ING Bank
+de oude metadata
+publisher
+	-> internal
+	-> external
+
+
+
+[ ] make application into modules, instelbaar per ORGANISATION (reseller|publisher), alleen (administrators) mogen dit.
+	[ ] video workflow
+		[ ] reseller
+		[ ] publisher
+			[ ] video metadata
+		[ ] video
+			[ ] wmv
+	[ ] project management workflow
+
+TODO
+----
+[ ] metadata per publisher
+[ ] wmv module
+
+
+
+
+ISSUES / HIGH PRIORITY
+------
+[ ] Critical: extra security checks voor Publishers en Resellers voor data velden
+	[ ] User -> Organisation ($organisation_id)
+	[~] User -> Role ($role_id, can only set roles that are lower or equal rank) ... 
+	[x] Video -> Publisher // Organisation ($organisation_id)
+	[ ] Organisation -> Organisation ($parent_id)
+
+[ ] Major: Publishing based on status `published` and (publication_date and) expiration_date.
+	gaat in de embed functies (iframe, embed en evt play)
+	
+FEATURES / USEFUL, BUT NOT NECESSARY NOW
+--------
+[x] Feature: Activity Log
+[ ] Feature: User filter voor Admins, Reseller en Publishers
+[ ] Feature: Publisher filter voor Admins en Resellers
+[ ] Feature: Publisher settings
+	[ ] Player(s)
+	[ ] Metadata
+	[x] Whitelist --> global and local whitelist (per publisher)
+		remove all ips, then add the insurance once to Nationale Nederlanden
+	[ ] Roles, Permissions .... ?
+	[ ] Encodings, Transcodings
+	[ ] Transloadings: Facebook
+	[ ] Transloadings: Youtube 
+
+MEDIUM PRIORITY
+---------------
+[ ] Feature: Minoto errors extra checks (e.g. what if minoto is down?)
+[ ] Feature: Add ORM
+	[ ] Fix belongs-to relationships
+	[ ] Fix has-many relationships
+	[ ] Fix many-to-many relationships
+
+
+LOW PRIORIRTY
+-------------
+[ ] Feature: Pagination (Limit, Offset) on lists (index pages)
+[ ] Feature: Access Control... Roles + Permissions (might need a rewrite if we use it for Dutchview).
+[ ] Feature: Sort items by default. (in filters. usually in foreignkey forms)
+[ ] Feature: Add Metadata dynamically (i.e. per video)
+
+[ ] Feature: Make a dark and light bootstrap theme (only for navigation)
+[ ] Feature: Internationalisation (NL, EN)
+[ ] Feature: Fotobank <-- BIG
+[ ] Feature: Workflows: Project Management
+[ ] Feature: PDF Exports
+[ ] Feature: Mail system
+[ ] Feature: Hooks system, see http://ellislab.com/codeigniter/user-guide/general/hooks.html
+
+Miscellaneous
+-------------
+[ ] General: Remove templating (brings more problems and the features are hardly useful...)
+	[ ] includes/ may keep parsing templates.
+[ ] General: Refactoring !!!!
+	[ ] clean up of Model, View, Controller
+
+
+
+
+
+
+
+[2012.08.xx] Fixed
+------------------
+[x] Feature: add help (i) icon for fields
+[x] Feature: Dashboard with more information.
+
+[2012.07.xx] Fixed
+------------------
+[x] Feature: players, voor nu is het de default FWD player
+[x] Feature: organisation (publisher, reseller settings), elke organisatie moet eigen naam, kleuren, players hebben
+[x] Feature: security, embedding; whitelisting todo... wat/waar komt dit precies.
+[x] Feature: wachtwoord vergeten, wachtwoord resetten, etc.
+
+Documentation
+-------------
+[x] Documentation: installatie guide / github
+[x] Documentation: Handleiding voor de klant -- WORKSFORME :P
+[x] Documentation: Handleiding voor de developer -- WORKSFORME :P
+
+
+
+
+
+
+
+
+
+Fields
+------
+label
+type
+rules
+values
+value	// default value
+display		// (image|url), default = niks
+html_escape	// (false), default = true
+help // todo, does NOT exist yet.
+
+
+
+Logged activities
+-----------------
+TODO: deletes?
+	Get organisations (ALL, reseller+publishers, publisher)
+		Get all users IN organisations
+			Get all activities IN users WHERE context = dashboard (login, logout for admins only?)
+
+
+	Video	Publish				[Green] User x published video [XXXX]
+	Video	Announce			[Green] User x created a new Video [XXXX]
+	Video	Uploaded			[Blue] User x uploaded a video for [XXXX]
+	Video	Configure			[Blue] User x configured video [XXXX]
+
+	Publisher	Create			[Green] User x created a new Publisher [XXXX]
+	Reseller	Create			[Green] User x created a new Reseller [XXXX]
+	User	Create				[Green] User x created a new User [XXXX]
+
+	Authentication	Login		[Red] User x logged in
+	Authentication	Logout		[Red] User x logged out
+
+<span class="label label-important"> RED </span>
+<span class="label"> GRAY </span>
+<span class="label label-warning"> YELLOW </span>
+<span class="label label-info"> BLUE </span>
+<span class="label label-success"> GREEN </span>

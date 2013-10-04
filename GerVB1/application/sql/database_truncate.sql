@@ -1,0 +1,16 @@
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE `activity`;
+TRUNCATE `groups`;
+TRUNCATE `login_attempts`;
+TRUNCATE `organisation`;
+TRUNCATE `permissions`;
+TRUNCATE `roles`;
+TRUNCATE `roles_permissions`;
+TRUNCATE `users`;
+TRUNCATE `users_groups`;
+TRUNCATE `users_roles`;
+TRUNCATE `video`;
+TRUNCATE `video_metadata`;
+TRUNCATE `whitelist`;
+TRUNCATE `whitelist_domain`;
+SET FOREIGN_KEY_CHECKS = 1;

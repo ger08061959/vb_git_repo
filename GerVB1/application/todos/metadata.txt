@@ -1,0 +1,77 @@
+~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
+
+
+ 
+
+Database
+- Video -> extra field : $metadata
+- Publisher_Setting -> tabel (id, name, value) // stuff like color etc. can be put here.
+
+Publisher
+- application -> settings
+- video -> whitelist
+- video -> metadata
+
+Video
+- video -> default metadata
+- video -> extra metadata from publisher
+- video -> extra metadata from video itself
+- video -> add metadata
+
+
+Nieuwe tabel: Video_metadata
+id
+organisation_id
+sort_order
+label
+type
+values
+value
+
+
+~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
+
+[meta_][name] [type |v]
+label, type ( ... ) , params[values]
+
+'meta_herp_a_derp' = array( ---> trim, lowercase all, convert spaces and weird symbols to underscore
+	'type' => 'text',
+	'label' => 'Herp-a-derp'
+)
+
+
+
+
+publisher -> publisher_setting
+
+$video_metadata = $publisher->setting('video_metadata')->value; // ??? hmm... merge with $model->fieldsa and add all values to $keys 
+$metadata = unserialize( $video->metadata );
+
+metakeys_from_publisher
+
+foreach($video_metadata as $data ) {
+	// make fields
+	// name should be something with adding meta_ ($meta_prefix = 'meta_');
+}
+
+foreach(  )
+
+[+] add metadata
+[ name ], [ value ] (type=text) default
+
+----------------------------------
+Metadata instelbaar per publisher (door de admin/reseller)
+---------------------------------
+label
+type
+values
+value	// default value
+display		// (image|url), default = niks
+html_escape	// (false), default = true
+
+
+----------------------------------
+Extra Metadata toevoegen aan video (door de gebruiker)
+----------------------------------
+serialize( ... )
+unserialize( ... )
