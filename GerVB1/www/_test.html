@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Novum</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+		<!--<link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">-->
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/bootstrap-datetimepicker-0.0.11/css/bootstrap-datetimepicker.min.css">
+        <link rel="stylesheet" href="assets/style.css">
+    </head>
+    <body>
+		<!-- /navbar -->
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="brand" href="index.html">Novum</a>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li class="active"><a href="index.html"><i class="icon-white icon-home"></i> Home</a></li>
+							<li class=""><a href="archief.html"><i class="icon-white icon-folder-close"></i> Archief</a></li>
+							<li class=""><a href="perslijsten.html"><i class="icon-white icon-list"></i> Perslijsten</a></li>
+							<li class=""><a href="beheer.html"><i class="icon-white icon-cog"></i> Beheer</a></li>
+						</ul>
+						<ul class="nav pull-right">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<i class=" icon-white icon-user"></i> Achmea <b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#"><i class="icon-user"></i> Profiel</a></li>
+									<li><a href="#"><i class="icon-cog"></i> Instellingen</a></li>
+									<li><a href="#"><i class="icon-off"></i> Uitloggen</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /navbar -->
+		
+		<!-- header -->
+		<header>
+			<div class="container">
+				<h2>Home</h2>
+				<p>Welkom Achmea! Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec turpis nec nisi dignissim tempor nec vitae neque.</p>
+				<!-- nav-tabs -->
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#">Gebruikers</a></li>
+					<li><a href="#">Persberichten</a></li>
+					<li><a href="#">Persvragen</a></li>
+					<li><a href="#">Koppelingen</a></li>
+					<li><a href="#">Organisaties</a></li>
+					<li><a href="#">Admins</a></li>
+					<li><a href="#">Pricing</a></li>
+					<li><a href="#">Zoeken</a></li>
+					<li><a href="#">Exports</a></li>
+				</ul>
+				<!-- /nav-tabs -->
+			</div>
+		</header>
+		<!-- /header -->
+		
+		<!-- container -->
+		<div class="container">
+			<!-- breadcrumbs/wizard -->
+			<ul class="breadcrumb">
+				<li class=""><a href="#"><i class="icon-home"></i></a> <span class="divider">&raquo;</span></li>
+				<li class=""><a href="#">Archief</a> <span class="divider">&raquo;</span></li>
+				<li class=""><a href="#">Persberichten</a> <span class="divider">&raquo;</span></li>
+				<li class="">Een succesvol persbericht #1</li>
+			</ul>
+			<!-- /breadcrumbs/wizard -->
+			<!-- hero-unit -->
+			<div class="hero-unit">
+				<p style="text-align:center;">
+					<a class="btn btn-large btn-primary" href="#"><i class="icon-white icon-file"></i> Verstuur persbericht</a>
+					<a class="btn btn-large btn-primary" data-loading-text="<img src='assets/application/loading.gif' />" href="#"><i class="icon-white icon-picture"></i> Verstuur foto</a>
+				</p>
+			</div>
+			
+			<!-- /hero-unit -->
+			
+			<!-- recente persberichten -->
+			<h4>Recente persberichten <span class="pull-right"><a class="btn btn-small btn-inverse" href="#">Alle persberichten &raquo;</a></span></h4>
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Publicatie</th>
+						<th>Persbericht</th>
+						<th>Status</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="">
+						<td>2013-05-24</td>
+						<td>Een succesvol persbericht #3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. </td>
+						<td><span class="label label-success">success</span></td>
+						<td class="row-actions">
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="bekijken"><i class="icon-eye-open"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="bewerken"><i class="icon-pencil"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="statistieken"><i class="icon-signal"></i></a>
+						</td>
+					</tr>
+					<tr class="">
+						<td>2013-05-23</td>
+						<td>Een succesvol persbericht #2</td>
+						<td><span class="label label-success">success</span></td>
+						<td class="row-actions">
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="bekijken"><i class="icon-eye-open"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="bewerken"><i class="icon-pencil"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="statistieken"><i class="icon-signal"></i></a>
+						</td>
+					</tr>
+					<tr class="">
+						<td>2013-05-22</td>
+						<td>Een succesvol persbericht #1</td>
+						<td><span class="label label-success">success</span></td>
+						<td class="row-actions">
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="bekijken"><i class="icon-eye-open"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="bewerken"><i class="icon-pencil"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="statistieken"><i class="icon-signal"></i></a>
+						</td>
+					</tr>
+					<tr class="">
+						<td>2013-05-21</td>
+						<td>Een persbericht met waarschuwingen</td>
+						<td><span class="label label-warning">warning</span></td>
+						<td class="row-actions">
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="bekijken"><i class="icon-eye-open"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="bewerken"><i class="icon-pencil"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="statistieken"><i class="icon-signal"></i></a>
+						</td>
+					</tr>
+					<tr class="">
+						<td>2013-05-20</td>
+						<td>Een persbericht met fouten</td>
+						<td><span class="label label-important">error</span></td>
+						<td class="row-actions">
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="bekijken"><i class="icon-eye-open"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="bewerken"><i class="icon-pencil"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="statistieken"><i class="icon-signal"></i></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- /recente persberichten -->
+			
+			<!-- opgeslagen concepten -->
+			<h4>Opgeslagen concepten <span class="pull-right"><a class="btn btn-small btn-inverse" href="#">Alle concepten &raquo;</a></span></h4>
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Publicatie</th>
+						<th>Persbericht</th>
+						<th>Status</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="">
+						<td>2013-05-24</td>
+						<td>Een succesvol persbericht #3</td>
+						<td><span class="label label-success">success</span></td>
+						<td class="row-actions">
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="bewerken"><i class="icon-pencil"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="publiceren"><i class="icon-share-alt"></i></a>
+						</td>
+					</tr>
+					<tr class="">
+						<td>2013-05-23</td>
+						<td>Een succesvol persbericht #2</td>
+						<td><span class="label label-success">success</span></td>
+						<td class="row-actions">
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="bewerken"><i class="icon-pencil"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="publiceren"><i class="icon-share-alt"></i></a>
+						</td>
+					</tr>
+					<tr class="">
+						<td>2013-05-22</td>
+						<td>Een succesvol persbericht #1</td>
+						<td><span class="label label-success">success</span></td>
+						<td class="row-actions">
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="bewerken"><i class="icon-pencil"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="publiceren"><i class="icon-share-alt"></i></a>
+						</td>
+					</tr>
+					<tr class="">
+						<td>2013-05-21</td>
+						<td>Een persbericht met waarschuwingen</td>
+						<td><span class="label label-warning">warning</span></td>
+						<td class="row-actions">
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="bewerken"><i class="icon-pencil"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="publiceren"><i class="icon-share-alt"></i></a>
+						</td>
+					</tr>
+					<tr class="">
+						<td>2013-05-20</td>
+						<td>Een persbericht met fouten</td>
+						<td><span class="label label-important">error</span></td>
+						<td class="row-actions">
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="bewerken"><i class="icon-pencil"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="publiceren"><i class="icon-share-alt"></i></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- /opgeslagen concepten -->
+			
+			<!-- bestanden -->
+			<h4>Bestanden</h4>
+			<table class="table table-hover table-striped">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Bestandsnaam</th>
+						<th>Verbergen</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="">
+						<td>2013-05-24</td>
+						<td>Een succesvol persbericht #3</td>
+						<td><input type="checkbox"></td>
+						<td class="row-actions">
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="preview"><i class="icon-eye-open"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="hernoemen"><i class="icon-pencil"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="verwijderen"><i class="icon-trash"></i></a>
+						</td>
+					</tr>
+					<tr class="">
+						<td>2013-05-23</td>
+						<td>Een succesvol persbericht #2</td>
+						<td><input type="checkbox"></td>
+						<td class="row-actions">
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="preview"><i class="icon-eye-open"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="hernoemen"><i class="icon-pencil"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="verwijderen"><i class="icon-trash"></i></a>
+						</td>
+					</tr>
+					<tr class="">
+						<td>2013-05-22</td>
+						<td>Een succesvol persbericht #1</td>
+						<td><input type="checkbox"></td>
+						<td class="row-actions">
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="preview"><i class="icon-eye-open"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="hernoemen"><i class="icon-pencil"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="verwijderen"><i class="icon-trash"></i></a>
+						</td>
+					</tr>
+					<tr class="">
+						<td>2013-05-21</td>
+						<td>Een persbericht met waarschuwingen</td>
+						<td><input type="checkbox"></td>
+						<td class="row-actions">
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="preview"><i class="icon-eye-open"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="hernoemen"><i class="icon-pencil"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="verwijderen"><i class="icon-trash"></i></a>
+						</td>
+					</tr>
+					<tr class="">
+						<td>2013-05-20</td>
+						<td>Een persbericht met fouten</td>
+						<td><input type="checkbox"></td>
+						<td class="row-actions">
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="preview"><i class="icon-eye-open"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="hernoemen"><i class="icon-pencil"></i></a>
+							<a href="#" class="btn btn-small" data-toggle="tooltip" title="verwijderen"><i class="icon-trash"></i></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- /bestanden -->
+		</div>
+		<!-- /container -->
+		
+		<!-- footer -->
+		<footer class="footer">
+			<div class="container">
+				<p>Designed by <a href="http://www.datiq.com">Datiq B.V.</a> 2013</p>
+				
+				<a href="#"
+					class="btn btn-large btn-danger"
+					data-toggle="popover"
+					title=""
+					data-html="true"
+					data-content="And here's <b>some</b> amazing content. It's very engaging. right?"
+					data-original-title="A Title">Click to toggle popover</a>
+			</div>
+		</footer>
+		lel
+<span class="label label-important">Error</span>
+<span class="label">Announced</span>
+<span class="label">Announced</span>
+<span class="label label-warning">Uploading ...</span>
+<span class="label label-warning">Uploaded</span>
+<span class="label label-warning">Encoding ...</span>
+<span class="label label-warning">Encoded</span>
+<span class="label label-info">Authorised</span>
+<span class="label label-success">Published</span>
+		
+		<!-- /footer -->
+        <!--
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="jquery/jquery-1.9.0.min.js"><\/script>')</script>
+    	-->
+    	<script src="assets/jquery/jquery-1.9.0.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="assets/bootstrap-datetimepicker-0.0.11/js/bootstrap-datetimepicker.min.js"></script>
+	    <script>
+			$('a[data-toggle="tooltip"]').tooltip();
+			$('a[data-toggle="popover"]').popover();
+			
+			// quick test for button loading.
+				$('a').click(function(e){ $(this).button('loading') });
+	    </script>
+    </body>
+</html>
