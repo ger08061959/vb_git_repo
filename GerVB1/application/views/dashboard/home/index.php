@@ -168,7 +168,10 @@ uasort($topVideos, array( $mySortByKeys , 'compare'));
 				<tr>
 					<td><a href="dashboard/video/edit/<?php echo $video->minoto_id ?>"><?php echo $video->title ?></a></td>
 					<td><?php echo $this->video_model->fields['status']['values'][$video->status]; ?></td>
-					<td><span class="label" data-toggle="tooltip" title="" data-original-title="<?php echo $top_videos[$video->minoto_id]->views ?> views / <?php echo $top_videos[$video->minoto_id]->viewers ?> viewers"><i class="icon-white icon-film"></i></label></td>
+					<td>
+						<span class="label" data-toggle="tooltip" title="" data-original-title="<?php echo $top_videos[$video->minoto_id]->views ?> views / <?php echo $top_videos[$video->minoto_id]->viewers ?> viewers"></span>
+						<i class="icon-white icon-film"></i>
+					</td>
 				</tr>
 				<?php endforeach; else: ?>
 				<tr>

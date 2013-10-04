@@ -1,5 +1,5 @@
 <?php
-define('JAVASCRIPT_PLAYER_ENABLED', false);
+define('JAVASCRIPT_PLAYER_ENABLED', true);
 define('FLASH_PLAYER_ENABLED', true);
 
 $pub          = $this->db->get_where('organisation', array('id' => $result['organisation_id'] ))->row();
@@ -283,9 +283,14 @@ $transcodingKeys = array('key', 'name', 'description');
 		</object>
 		-->
 		<?php if(JAVASCRIPT_PLAYER_ENABLED): ?>
-		<iframe type="text/html" width="800" height="450" src="<?php echo $iframeUrl; ?>" frameborder="0" scrolling="no" style="overflow:hidden;" allowfullscreen webkitAllowFullScreen mozallowfullscreen allowFullScreen>Video cannot be shown in this browser.</iframe>
+			<iframe width="800" height="450" src="<?php echo $iframeUrl; ?>" style="overflow:hidden;">Video cannot be shown in this browser.</iframe>
 		<?php else : ?>
-		<object width="800" height="450"><param name="movie" value="<?php echo $embedUrl; ?>"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="<?php echo $embedUrl; ?>" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="800" height="450"></embed></object>
+			<object width="800" height="450">
+		   		<param name="movie" value="<?php echo $embedUrl; ?>"/>
+		   		<param name="allowFullScreen" value="true"/>
+		   		<param name="allowscriptaccess" value="always"/>
+		   		<embed src="<?php echo $embedUrl; ?>" type="application/x-shockwave-flash" width="800" height="450"/>
+		   </object>
 		<?php endif; ?>
 	</div>
 	<!-- /preview -->
@@ -320,7 +325,11 @@ $transcodingKeys = array('key', 'name', 'description');
 	<?php else : ?>
 	<div class="row">
 		<div class="span8">
-		<pre><a href="<?php echo $screen->uri; ?>" download><img style="height:150px;" src="<?php echo $screen->uri; ?>" /></a></pre>
+		<pre>
+			<a href="<?php echo $screen->uri; ?>">
+			 <img style="height:150px;" src="<?php echo $screen->uri; ?>" />
+			</a>
+		</pre>
 		</div>
 		<div>
 			<a class="btn pull-right" href="<?php echo $directoryName?>/<?php echo $controllerName; ?>/screenshot/<?php echo $result['minoto_id']; ?>" target="_blank"><i class="icon-download"></i> Download</a>
